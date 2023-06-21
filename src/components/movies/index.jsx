@@ -7,7 +7,7 @@ function Movies({ movies, title = 'Movies' }) {
       <h2 className='title'> {title} </h2>
       <div className='flex flex-wrap justify-evenly gap-5'>
         {movies.map((movie, i) => (
-          <div className='flex-shrink-0 relative overflow-hidden rounded-xl hover:scale-110 transition-all h-80 w-52 border border-zinc-700'>
+          <div key={i} className='flex-shrink-0 relative overflow-hidden rounded-xl hover:scale-110 transition-all h-80 w-52 border border-zinc-700'>
             <Link
               href={`/movie/${movie.id}`}
             >
