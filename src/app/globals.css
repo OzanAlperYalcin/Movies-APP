@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-grid {
+    @apply grid grid-cols-container grid-rows-container
+  }
+  .container-grid > * {
+    @apply col-start-2
+  }
+  .container-grid > .fluid {
+    @apply col-span-3
+  }
+  .title {
+    @apply font-medium text-2xl tracking-tight
+  }
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+    background-color: #000000;
+    z-index: -100;
+    position: relative;
+    color: white;
+  }
+}
